@@ -318,6 +318,23 @@ namespace eosio {
    eosio::checksum160 ripemd160( const char* data, uint32_t length );
 
    /**
+    *  Verifies an RSA signature using SHA-256 hashing.
+    *
+    *  @ingroup crypto
+    *  @param message - Pointer to the message data to be verified
+    *  @param message_len - Length of the message data
+    *  @param signature - RSA signature to verify
+    *  @param exponent - RSA public key exponent
+    *  @param modulus - RSA public key modulus
+    *  @return bool - `true` if the signature is valid, `false` otherwise
+    */
+   bool verify_rsa_sha256_sig( const void* message,
+                               uint32_t message_len,
+                               std::string_view signature,
+                               std::string_view exponent,
+                               std::string_view modulus);
+
+   /**
     *  Calculates the public key used for a given signature on a given digest.
     *
     *  @ingroup crypto
