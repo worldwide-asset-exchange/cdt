@@ -36,7 +36,7 @@ extern "C" {
    void ripemd160( const char* data, uint32_t length, capi_checksum160* hash );
 
    __attribute__((eosio_wasm_import))
-   int verify_rsa_sha256_sig( const void* message,   uint32_t message_len,
+   int32_t verify_rsa_sha256_sig( const void* message,   uint32_t message_len,
                               const char* signature, uint32_t signature_len,
                               const char* exponent,  uint32_t exponent_len,
                               const char* modulus,   uint32_t modulus_len);

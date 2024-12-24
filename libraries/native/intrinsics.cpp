@@ -229,6 +229,12 @@ extern "C" {
    int32_t db_end_i64(capi_name code, uint64_t scope, capi_name table) {
       return intrinsics::get().call<intrinsics::db_end_i64>(code, scope, table);
    }
+   int32_t verify_rsa_sha256_sig( const void* message,   uint32_t message_len,
+                           const char* signature, uint32_t signature_len,
+                           const char* exponent,  uint32_t exponent_len,
+                           const char* modulus,   uint32_t modulus_len){
+      return intrinsics::get().call<intrinsics::verify_rsa_sha256_sig>(message, message_len, signature, signature_len, exponent, exponent_len, modulus, modulus_len);
+   }
    void assert_recover_key( const capi_checksum256* digest, const char* sig, size_t siglen, const char* pub, size_t publen ) {
       return intrinsics::get().call<intrinsics::assert_recover_key>(digest, sig, siglen, pub, publen);
    }

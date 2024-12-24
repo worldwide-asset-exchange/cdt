@@ -180,7 +180,8 @@ intrinsic_macro(bls_g2_map) \
 intrinsic_macro(bls_fp_mod) \
 intrinsic_macro(bls_fp_mul) \
 intrinsic_macro(bls_fp_exp) \
-intrinsic_macro(set_finalizers)
+intrinsic_macro(set_finalizers) \
+intrinsic_macro(verify_rsa_sha256_sig)
 
 #define CREATE_ENUM(name) \
    name,
