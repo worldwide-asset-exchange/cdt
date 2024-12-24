@@ -10,6 +10,7 @@ void test_crypto( void ) {
    sha1( NULL, 0, NULL );
    sha512( NULL, 0, NULL );
    ripemd160( NULL, 0, NULL );
+   verify_rsa_sha256_sig( NULL, 0, NULL, 0, NULL, 0, NULL, 0);
    recover_key( NULL, NULL, 0, NULL, 0 );
    assert_recover_key( NULL, NULL, 0, NULL, 0 );
 }
