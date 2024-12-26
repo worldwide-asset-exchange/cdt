@@ -124,6 +124,7 @@ intrinsic_macro(sha1) \
 intrinsic_macro(sha256) \
 intrinsic_macro(sha512) \
 intrinsic_macro(ripemd160) \
+intrinsic_macro(verify_rsa_sha256_sig) \
 intrinsic_macro(check_transaction_authorization) \
 intrinsic_macro(check_permission_authorization) \
 intrinsic_macro(get_permission_last_used) \

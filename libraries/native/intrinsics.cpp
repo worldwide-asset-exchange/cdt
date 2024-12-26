@@ -259,6 +259,12 @@ extern "C" {
    void ripemd160( const char* data, uint32_t length, capi_checksum160* hash ) {
       return intrinsics::get().call<intrinsics::ripemd160>(data, length, hash);
    }
+   int32_t verify_rsa_sha256_sig( const void* message,   uint32_t message_len,
+                           const char* signature, uint32_t signature_len,
+                           const char* exponent,  uint32_t exponent_len,
+                           const char* modulus,   uint32_t modulus_len){
+      return intrinsics::get().call<intrinsics::verify_rsa_sha256_sig>(message, message_len, signature, signature_len, exponent, exponent_len, modulus, modulus_len);
+   }
    int32_t check_transaction_authorization( const char* trx_data,     uint32_t trx_size,
                                     const char* pubkeys_data, uint32_t pubkeys_size,
                                     const char* perms_data,   uint32_t perms_size
